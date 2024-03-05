@@ -6,7 +6,7 @@
 //
 
 import UIKit
-//12312312
+// ....
 class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     // m

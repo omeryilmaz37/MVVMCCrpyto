@@ -14,7 +14,6 @@
 		7D2CD1B72B972731001A4F69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D2CD1B62B972731001A4F69 /* Assets.xcassets */; };
 		7D2CD1BA2B972731001A4F69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D2CD1B82B972731001A4F69 /* LaunchScreen.storyboard */; };
 		7D56132F2B97A1A200A6F9A0 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D56132E2B97A1A200A6F9A0 /* Crypto.swift */; };
-		7D5613322B97BCAC00A6F9A0 /* Dev.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5613312B97BCAC00A6F9A0 /* Dev.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +26,6 @@
 		7D2CD1B92B972731001A4F69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D2CD1BB2B972731001A4F69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D56132E2B97A1A200A6F9A0 /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
-		7D5613312B97BCAC00A6F9A0 /* Dev.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dev.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +58,6 @@
 		7D2CD1AC2B972731001A4F69 /* MVVMCryptoCrazy */ = {
 			isa = PBXGroup;
 			children = (
-				7D5613302B97BCA100A6F9A0 /* Dev */,
 				7D56132D2B97A10700A6F9A0 /* Service */,
 				7D56132C2B97A0A100A6F9A0 /* Model */,
 				7D56132B2B97A09900A6F9A0 /* ViewModel */,
@@ -103,14 +100,6 @@
 			children = (
 			);
 			path = Service;
-			sourceTree = "<group>";
-		};
-		7D5613302B97BCA100A6F9A0 /* Dev */ = {
-			isa = PBXGroup;
-			children = (
-				7D5613312B97BCAC00A6F9A0 /* Dev.swift */,
-			);
-			path = Dev;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,7 +176,6 @@
 				7D56132F2B97A1A200A6F9A0 /* Crypto.swift in Sources */,
 				7D2CD1B22B972731001A4F69 /* ViewController.swift in Sources */,
 				7D2CD1AE2B972731001A4F69 /* AppDelegate.swift in Sources */,
-				7D5613322B97BCAC00A6F9A0 /* Dev.swift in Sources */,
 				7D2CD1B02B972731001A4F69 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -27,7 +27,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         content.text = "Crypto Currency"
         content.secondaryText = "Crypto Price"
         cell.contentConfiguration = content
-        return cell
+        return cell//fff
     }
 }
 

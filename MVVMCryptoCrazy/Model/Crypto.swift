@@ -6,8 +6,11 @@
 //
 
 import Foundation
-//3
-struct Crypto : Decodable{
-    let currency : String
-    let price : String
+
+struct Crypto: Decodable {
+    // Bu yapı, JSON formatındaki verileri çözebilir yani içeri aktarır verileri.
+    // currency: Kripto para biriminin adını içerir.
+    // price: Kripto para biriminin fiyatını içerir.
+    let currency: String
+    let price: String
 }

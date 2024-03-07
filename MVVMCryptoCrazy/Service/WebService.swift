@@ -44,6 +44,17 @@ class WebService{
         }.resume()
     }
 }
+
+
+//CryptoError adında bir enum tanımlıyorsunuz. Bu enum, sunucudan veri alma veya veriyi çözümleme sırasında oluşabilecek hataları belirtmek için kullanılıyor.
+//WebService adında bir sınıf tanımlıyorsunuz. Bu sınıf, web hizmeti çağrıları yapmak için kullanılacak fonksiyonları içeriyor.
+//downloadCurrencies fonksiyonu, belirtilen bir URL'den kripto para birimi verilerini indirmek için kullanılıyor. Bu fonksiyon, URL'den veri almak için URLSession kullanıyor ve aldığı veriyi JSONDecoder kullanarak çözümlüyor.
+//URLSession.shared.dataTask(with:completionHandler:) metodunu kullanarak bir veri indirme işlemi başlatıyorsunuz. Bu metod, bir URL'ye bir HTTP isteği gönderir ve alınan veriyi işlemek için bir kapanış işlevi çağırır.
+//Kapanış işlevi, alınan veriyi, yanıtı ve olası hataları işler. Eğer bir hata oluşursa, completion kapanış işlevine .failure durumuyla birlikte ilgili CryptoError durumunu iletiyor. Başarılı bir şekilde veri alındığında ve çözümlendiğinde ise, çözümlenen kripto para listesini completion kapanış işlevine .success durumuyla birlikte iletiyor.
+//Bu kod bloğunda, Swift dilinin temel bileşenleri olan enum'lar, sınıflar ve kapanış işlevleri kullanılmıştır. Ayrıca, URL'lerle veri indirme işlemlerini yönetmek için Foundation framework'ünün bir parçası olan URLSession sınıfı kullanılmıştır. JSON verilerini işlemek için ise Foundation framework'ünün bir diğer bileşeni olan JSONDecoder kullanılmıştır.
+
+//------------------------------------------------------------------------------------------------------------------
+
 // URLSession.shared: Paylaşılan bir URLSession örneğine erişir.
 // URLSession sınıfı, ağ üzerinde veri alışverişi yapmak için kullanılan bir API'dir.
 

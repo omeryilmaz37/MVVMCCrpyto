@@ -38,6 +38,19 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
                     print(error)
             }
         }
+        
+//        Bir URL oluşturulur: Bu URL, kripto para birimi verilerinin bulunduğu kaynağa yönlendirilir.
+//
+//        WebService sınıfının downloadCurrencies fonksiyonu çağrılır: Bu fonksiyon, belirtilen URL'den kripto para birimi verilerini indirmek için kullanılır. İndirme işlemi asenkron olarak gerçekleştirilir ve sonuç, bir Result türü içinde döndürülür.
+//        Result türü üzerinde bir anahtar kelimeler kullanılarak bir switch ifadesi oluşturulur: Bu ifade, indirme işleminin başarılı olup olmadığını kontrol eder.
+        
+//        İndirme işlemi başarılı olduğunda:
+//        Çözümlenen kripto para listesi cryptos adlı bir değişkene atanır.
+//        Bu kripto para listesi self.cryptoList özelliğine atanarak kullanılabilir hale getirilir.
+//        TableView güncellenir ve yeni veriler ekrana yansıtılır.
+//        İndirme işlemi başarısız olduğunda:
+//        Oluşan hata konsola yazdırılır.
+//        Bu kod bloğunda, Swift dilinin temel bileşenleri olan URL oluşturma, asenkron işlemler, Result türü, switch ifadeleri ve DispatchQueue gibi yapılar kullanılmıştır. Ayrıca, WebService sınıfı aracılığıyla veri indirme işlemi gerçekleştirilmiş ve sonuçları ele alınmıştır.
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

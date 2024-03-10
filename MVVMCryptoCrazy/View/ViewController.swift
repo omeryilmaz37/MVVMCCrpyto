@@ -9,9 +9,11 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController,UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
-
+    
+    @IBOutlet weak var indicatorView: UIActivityIndicatorView!
+    
     let cryptoVM = CryptoViewModel()
     let disposeBag = DisposeBag()
     
@@ -19,24 +21,35 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        tableView.dataSource = self
-        tableView.delegate = self
+//        tableView.dataSource = self
+//        tableView.delegate = self
         
+        tableView.rx.setDelegate(self).disposed(by: disposeBag)
+        setupBindings()
         cryptoVM.requestData()
     }
     
     private func setupBindings() {
+        
+        cryptoVM.loading.bind(to: self.indicatorView.rx.isAnimating).disposed(by: disposeBag)
+        
         cryptoVM.error.observe(on: MainScheduler.asyncInstance).subscribe { errorString in
             print(errorString)
         }.disposed(by: disposeBag)
         
+        /*
         cryptoVM.cryptos.observe(on: MainScheduler.asyncInstance).subscribe { cryptos in
-            self.cryptoList = self.cryptoList
+            self.cryptoList = cryptos
             self.tableView.reloadData()
         }.disposed(by: disposeBag)
-        
+        */
+                
+        cryptoVM.cryptos.observe(on: MainScheduler.asyncInstance).bind(to: tableView.rx.items(cellIdentifier: "CryptoCell", cellType: CryptoTableViewCell.self)){row,item,cell in
+            cell.item = item
+        }.disposed(by: disposeBag)
     }
     
+    /*
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cryptoList.count
     }
@@ -49,5 +62,6 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         cell.contentConfiguration = content
         return cell
     }
+    */
 }
 

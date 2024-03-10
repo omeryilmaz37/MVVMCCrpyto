@@ -19,24 +19,71 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="x2j-Wt-OQM">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CryptoCell" rowHeight="83" id="4cl-LJ-Usd" customClass="CryptoTableViewCell" customModule="MVVMCryptoCrazy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="83"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4cl-LJ-Usd" id="JJL-k9-fVE">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="83"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5u-Kq-zqn">
+                                                    <rect key="frame" x="10" y="16" width="373" height="28"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="373" id="0mn-ZE-ukS"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZk-5S-ITj">
+                                                    <rect key="frame" x="30" y="50.666666666666629" width="333" height="16.666666666666657"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="333" id="0nh-FM-KE1"/>
+                                                        <constraint firstAttribute="height" constant="16.666666666666657" id="ksr-rn-iWS"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="h5u-Kq-zqn" firstAttribute="centerX" secondItem="VZk-5S-ITj" secondAttribute="centerX" id="5Ul-pX-igj"/>
+                                                <constraint firstItem="h5u-Kq-zqn" firstAttribute="top" secondItem="JJL-k9-fVE" secondAttribute="topMargin" constant="5" id="XaK-7E-jdi"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="VZk-5S-ITj" secondAttribute="bottom" constant="4.666666666666714" id="qX7-uf-vH5"/>
+                                                <constraint firstItem="VZk-5S-ITj" firstAttribute="top" secondItem="h5u-Kq-zqn" secondAttribute="bottom" constant="6.6666666666666288" id="sOc-kK-nQ0"/>
+                                                <constraint firstItem="h5u-Kq-zqn" firstAttribute="centerX" secondItem="JJL-k9-fVE" secondAttribute="centerX" id="ykC-cq-yas"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="h5u-Kq-zqn" id="iE0-NF-pa2"/>
+                                            <outlet property="priceLabel" destination="VZk-5S-ITj" id="2FV-mL-Au7"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" id="oXc-8Q-5A2">
+                                <rect key="frame" x="0.0" y="404" width="393" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="x2j-Wt-OQM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="OfH-PO-mi3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="x2j-Wt-OQM" secondAttribute="bottom" id="gPl-TB-91d"/>
-                            <constraint firstItem="x2j-Wt-OQM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="o6S-g6-Jc0"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x2j-Wt-OQM" secondAttribute="trailing" id="rmS-S2-JRF"/>
+                            <constraint firstItem="x2j-Wt-OQM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="5bX-zx-MoP"/>
+                            <constraint firstItem="x2j-Wt-OQM" firstAttribute="trailing" secondItem="oXc-8Q-5A2" secondAttribute="trailing" id="EaR-rC-nqz"/>
+                            <constraint firstItem="x2j-Wt-OQM" firstAttribute="leading" secondItem="oXc-8Q-5A2" secondAttribute="leading" id="buf-b9-lQO"/>
+                            <constraint firstItem="x2j-Wt-OQM" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="wZd-CB-gOo"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="indicatorView" destination="oXc-8Q-5A2" id="8c6-At-fAT"/>
                         <outlet property="tableView" destination="x2j-Wt-OQM" id="MdU-j5-WmX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="4"/>
+            <point key="canvasLocation" x="139.69465648854961" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>
